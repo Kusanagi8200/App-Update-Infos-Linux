@@ -9,7 +9,7 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 echo # 
-echo -e "\033[43;30m INFOS SYSTEME LINUX / Copyright (C) Kusanagi8200/2023 \033[0m"
+echo -e "\033[43;30m CLEAN AND UPDATE LINUX / Copyright (C) Kusanagi8200/2023 \033[0m"
 
 if [ `whoami` != "root" ]
 then
@@ -39,29 +39,32 @@ ColorRed(){
 
 
 
-echo -e "\033[43;30m MENU SCRIPTS...........//\033[0m"
+echo -e "\033[43;30m MENU SCRIPTS ...................//\033[0m"
 
 menu(){
 echo -ne "
-$(ColorGreen ' 1 --> ') $(ColorGreen 'BOOT...........//')
+$(ColorGreen ' 1 --> ') $(ColorGreen 'Clean-script ............//')
 
-$(ColorGreen ' 2 --> ') $(ColorGreen 'HARDWARE.......//')
+$(ColorGreen ' 2 --> ') $(ColorGreen 'Clean-script-fast .......//')
 
-$(ColorGreen ' 3 --> ') $(ColorGreen 'NETWORK........//') 
+$(ColorGreen ' 3 --> ') $(ColorGreen 'Clean-script-vm .........//') 
 
-$(ColorGreen ' 4 --> ') $(ColorGreen 'SYSTEM.........//')
+$(ColorGreen ' 4 --> ') $(ColorGreen 'Clean-script.eng ........//')
 
-$(ColorRed ' 0 --> ') $(ColorRed 'EXIT...........//') 
+$(ColorGreen ' 5 --> ') $(ColorGreen 'Clean-script-fast.eng ...//')
 
-$(ColorGreen 'CHECK OPTION ?') "
+$(ColorRed ' 0 --> ') $(ColorRed 'EXIT ....................//') 
+
+$(ColorGreen 'SCRIPT NUMBER ..............// = ') "
         read a
         case $a in
-	        1) sh boot-sequence-check.sh ; menu ;;
-	        2) sh hardware-infos.sh ; menu ;;
-	        3) sh check-network.sh ; menu ;;
-	        4) sh system-infos.sh ; menu ;;
+	        1) sh clean-script.sh ; menu ;;
+	        2) sh clean-script-fast.sh ; menu ;;
+	        3) sh clean-script-vm.sh ; menu ;;
+	        4) sh clean-script.eng.sh ; menu ;;
+            5) sh clean-script-fast.eng.sh;;
 		0) exit 0 ;;
-		*) echo -e $(ColorRed 'MAUVAIS CHOIX.........//')
+		*) echo -e $(ColorRed 'MAUVAIS CHOIX ...................//')
         esac
 }
 
