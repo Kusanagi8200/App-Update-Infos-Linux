@@ -9,7 +9,7 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 echo # 
-echo -e "\033[43;30m CLEAN AND UPDATE LINUX / Copyright (C) Kusanagi8200/2023 \033[0m"
+echo -e "\033[43;30m APP CLEAN AND UPDATE LINUX / Copyright (C) Kusanagi8200/2023 \033[0m"
 
 if [ `whoami` != "root" ]
 then
