@@ -75,9 +75,9 @@ echo #
 echo -e "\033[43;30m ---> MISE À JOUR DES PAQUETS \033[0m"
 apt update 
 
-apt list --upgradable &&
+apt list --upgradable
 
-apt-get -y upgrade  >> /var/log/update_upgrade.log 2>> /var/log/update_upgrade.err 
+apt-get upgrade  >> /var/log/update_upgrade.log 2>> /var/log/update_upgrade.err
 
 apt-get --fix-broken install
 
@@ -139,5 +139,27 @@ else
 fi 
 echo #
 
-echo -e "\033[43;30m ---> THE END <--- \033[0m"
+# Reboot ? Function
+confirm()
+{
+    read -r -p "${1} [y/N] " response
+
+    case "$response" in
+        [yY][eE][sS]|[yY]) 
+            true
+            ;;
+        *)
+            false
+            ;;
+    esac
+}
+
+if confirm "REBOOT ?"; then
+   reboot
+else
+    echo #
+    echo -e "\033[44;30m ---> FIN DU SCRIPT <--- \033[0m"
+    
+fi
 echo #
+

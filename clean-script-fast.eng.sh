@@ -69,9 +69,9 @@ echo #
 echo -e "\033[43;30m ---> UPDATING PACKAGES \033[0m"
 apt update 
 
-apt list --upgradable && 
+apt list --upgradable &&
 
-apt-get -y upgrade  >> /var/log/update_upgrade.log 2>> /var/log/update_upgrade.err
+apt-get -y upgrade  >> /var/log/update_upgrade.log 2>> /var/log/update_upgrade.err 
 
 apt-get --fix-broken install
 
@@ -134,11 +134,26 @@ else
 fi 
 echo #
 
-zenity --title "REBOOT" --question --text "\nDo you want to reboot ?"
-if [ $? -eq 0 ]
-then 
-        reboot
-fi
+# Reboot ? Function
+confirm()
+{
+    read -r -p "${1} [y/N] " response
 
-echo -e "\033[43;30m ---> THE END <--- \033[0m"
+    case "$response" in
+        [yY][eE][sS]|[yY]) 
+            true
+            ;;
+        *)
+            false
+            ;;
+    esac
+}
+
+if confirm "REBOOT ?"; then
+   reboot
+else
+    echo #
+    echo -e "\033[44;30m ---> END OF SCRIPT <--- \033[0m"
+    
+fi
 echo #
