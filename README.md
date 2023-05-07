@@ -1,3 +1,2 @@
-# App-Clean-Update-Linux
+### Bash App for Clean-Update and System-Infos Linux
 
-Bash App for differentes version of Clean-Update-Linux script
