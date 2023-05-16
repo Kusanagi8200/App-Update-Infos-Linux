@@ -15,10 +15,29 @@ then
         exit 1
 fi
 
-zenity --title "ATTENTION" --question --text "An update can damage your system.\nMake a snapshot before starting the update.\n\n DO YOU WANT TO CONTINUE ?" \
-       --ok-label "OK" --cancel-label "QUIT"
-if [ "$?" != "0" ] ; then
-  exit 0
+#WARNING UPDATE
+echo  "\033[5;41;37m ATTENTION. UNE MISE A JOUR PEUT ENDOMMAGER VOTRE SYSTEME \033[0m"
+confirm()
+{
+    read -r -p "${1} [y/N] " response
+
+    case "$response" in
+        [yY][eE][sS]|[yY]) 
+            true
+            ;;
+        *)
+            false
+            ;;
+    esac
+}
+
+if confirm "VOULEZ VOUS CONTINUER ?"; then
+   echo #
+   echo  "\033[44;37m ---> POURSUITE DE LA MISE A A JOUR <--- \033[0m"
+else
+    echo #
+    echo  "\033[44;37m ---> FIN DE LA MISE A JOUR <--- \033[0m"
+    exit
 fi
 
 echo #
@@ -73,13 +92,36 @@ echo #
 echo  "\033[43;30m ---> UPDATING PACKAGES \033[0m"
 apt update && apt list --upgradable
 
-zenity --title "UPGRADE" --question --text "\n Do you want to update ?"
+#Séquence de mise à jours des paquets
 
-if [ $? q 0 ]
-then
-	apt upgrade
-        apt --fix-broken install
+echo  "\033[43;30m ---> MISE A JOUR DES PAQUETS \033[0m"
+apt update && apt list --upgradable
+
+confirm()
+{
+    read -r -p "${1} [y/N] " response
+
+    case "$response" in
+        [yY][eE][sS]|[yY]) 
+            true
+            ;;
+        *)
+            false
+            ;;
+    esac
+}
+
+if confirm "UPGRADE ?"; then
+   apt upgrade && apt --fix-broken install
+else
+    echo #
+    echo  "\033[44;30m ---> PAS D'UPGRADE <--- \033[0m"
+    echo #
+    echo  "\033[44;30m ---> FIN DU SCRIPT <--- \033[0m"
+    exit
 fi
+
+echo #
 echo # 
 
 echo  "\033[43;30m <--- PACKAGE UPDATE COMPLETE \033[0m"
@@ -150,16 +192,28 @@ echo #
 
 echo  "\033[43;30m HARDWARE AND USER INFORMATION \033[0m"
 
-zenity --title "NEOFETCH" --question --text "\nInstall Neofetch for more information ?"
+#INSTALLATION DE NEOFETCH CHECK INFOS SYSTEM
+confirm()
+{
+    read -r -p "${1} [y/N] " response
 
-if [ $? q 0 ]
-then 
-       apt install neofetch 
+    case "$response" in
+        [yY][eE][sS]|[yY]) 
+            true
+            ;;
+        *)
+            false
+            ;;
+    esac
+}
+
+if confirm "INSTALLER NEOFETCH ?"; then
+   apt install neofetch && neofetch
+else
+    echo #
+    echo  "\033[44;37m ---> NEOFETCH NE SERA PAS INSTALLÉ <--- \033[0m"
+    
 fi
-echo # 
-echo #
-
-neofetch
 echo #
 
 echo # 
@@ -179,12 +233,26 @@ echo #
 echo #
 echo #
 
-zenity --title "REBOOT" --question --text "\n Do you want to reboot ?"
-if [ $? q 0 ]
-then 
-        reboot
+# Reboot ? Function
+confirm()
+{
+    read -r -p "${1} [y/N] " response
+
+    case "$response" in
+        [yY][eE][sS]|[yY]) 
+            true
+            ;;
+        *)
+            false
+            ;;
+    esac
+}
+
+if confirm "REBOOT ?"; then
+   reboot
+else
+    echo #
+    echo  "\033[44;37m ---> FIN DU SCRIPT <--- \033[0m"
+    
 fi
-
-echo  "\033[43;30m ---> THE END <--- \033[0m"
 echo #
-
