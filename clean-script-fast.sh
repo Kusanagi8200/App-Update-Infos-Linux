@@ -122,8 +122,12 @@ rm -r -f ~/.local/share/Trash/files/*
 echo -e "\033[44;37m DONE \033[0m"
 echo #
 
-echo -e "\033[43;30m ---> NETTOYAGE DES CONFIG DE PAQUETS \033[0m"
-[[ $(dpkg -l | grep ^rc) ]] && sudo dpkg -P $(dpkg -l | awk '/^rc/{print $2}') || echo -e "\033[44;37m PAS DE PAQUETS À PURGER \033[0m"
+echo  "\033[43;30m ---> NETTOYAGE DES CONFIG DE PAQUETS \033[0m"
+if [ "$(dpkg -l | grep ^rc)" ]; then
+     dpkg -P $(dpkg -l | awk '/^rc/{print $2}')
+else
+    echo "\033[44;37m PAS DE PAQUETS À PURGER \033[0m"
+fi
 echo #
 
 echo -e "\033[43;30m <--- FIN DU NETTOYAGE POST-MAJ \033[0m"
@@ -134,13 +138,14 @@ echo #
 echo # 
 echo -e "\033[43;30m ---> FICHIER LOG ERREUR MAJ \033[0m"
 
-if [ -N /var/log/update_upgrade.err ]
-  then 
-	echo -e "\033[5;41;37m ATTENTION \033[0m" & cat /var/log/update_upgrade.err 
-        echo #
+if [ -e /var/log/update_upgrade.err ] && [ /var/log/update_upgrade.err -nt /var/log/update_upgrade.err ]
+then
+    echo  "\033[5;41;37m ATTENTION \033[0m"
+    cat /var/log/update_upgrade.err
+    echo
 else
-	echo -e "\033[44;37m PAS D'ERREUR DE MAJ \033[0m" 
-fi 
+    echo  "\033[44;37m NO UPDATE ERROR \033[0m"
+fi
 echo #
 
 # Reboot ? Function
