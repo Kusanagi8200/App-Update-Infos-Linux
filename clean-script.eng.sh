@@ -93,10 +93,6 @@ echo  "\033[43;30m ---> UPDATING PACKAGES \033[0m"
 apt update && apt list --upgradable
 echo #
 
-#Séquence de mise à jours des paquets
-echo  "\033[43;30m ---> MISE A JOUR DES PAQUETS \033[0m"
-apt update && apt list --upgradable
-
 confirm()
 {
     read -r -p "${1} [y/N] " response
