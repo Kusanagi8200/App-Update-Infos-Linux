@@ -59,8 +59,8 @@ $(ColorGreen 'SCRIPT NUMBER ..............// = ') "
 	        2) sh clean-script-fast.sh ; menu ;;
 	        3) sh clean-script-vm.sh ; menu ;;
 	        4) sh clean-script.eng.sh ; menu ;;
-            5) sh clean-script-fast.eng.sh;;
-			0) exit 0 ;;
+                5) sh clean-script-fast.eng.sh;;
+		0) exit 0 ;;
 		*) echo -e $(ColorRed 'MAUVAIS CHOIX ...................//')
         esac
 }
