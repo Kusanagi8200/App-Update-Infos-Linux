@@ -64,7 +64,7 @@ echo  "\033[44;37m APT PURGE \033[0m"
 apt purge
 echo #
 echo "\033[44;37m APT CHECK \033[0m"
-apt check
+apt-get check
 echo #
 echo  "\033[43;30m <--- FIN DU NETTOYAGE PRE-MAJ \033[0m"
 
@@ -109,7 +109,7 @@ echo  "\033[44;37m APT PURGE \033[0m"
 apt purge
 echo #
 echo  "\033[44;37m APT CHECK \033[0m"
-apt check
+apt-get check
 echo #
 
 echo  "\033[43;30m ---> NETTOYAGE DU CACHE \033[0m"
