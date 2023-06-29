@@ -111,9 +111,9 @@ if confirm "UPGRADE ?"; then
    apt upgrade && apt --fix-broken install
 else
     echo #
-    echo  "\033[44;30m ---> PAS D'UPGRADE <--- \033[0m"
+    echo  "\033[44;30m ---> NO UPGRADE <--- \033[0m"
     echo #
-    echo  "\033[44;30m ---> FIN DU SCRIPT <--- \033[0m"
+    echo  "\033[44;30m ---> END OF SCRIPT <--- \033[0m"
     exit
 fi
 
@@ -203,11 +203,11 @@ confirm()
     esac
 }
 
-if confirm "INSTALLER NEOFETCH ?"; then
+if confirm "INSTALL NEOFETCH ?"; then
    apt install neofetch && neofetch
 else
     echo #
-    echo  "\033[44;37m ---> NEOFETCH NE SERA PAS INSTALLÉ <--- \033[0m"
+    echo  "\033[44;37m ---> NEOFETCH WILL NOT BE INSTALLED <--- \033[0m"
     
 fi
 echo #
@@ -217,7 +217,7 @@ echo  "\033[43;30m ---> NO PACKAGES TO BE PURGED \033[0m"
 
 if [ -e /var/log/update_upgrade.err ] && [ /var/log/update_upgrade.err -nt /var/log/update_upgrade.err ]
 then
-    echo  "\033[5;41;37m ATTENTION \033[0m"
+    echo  "\033[5;41;37m WARNING \033[0m"
     cat /var/log/update_upgrade.err
     echo
 else
@@ -248,7 +248,7 @@ if confirm "REBOOT ?"; then
    reboot
 else
     echo #
-    echo  "\033[44;37m ---> FIN DU SCRIPT <--- \033[0m"
+    echo  "\033[44;37m ---> END OF SCRIPT <--- \033[0m"
     
 fi
 echo #
