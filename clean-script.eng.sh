@@ -82,7 +82,7 @@ echo  "\033[44;37m APT PURGE \033[0m"
 apt purge
 echo #
 echo  "\033[44;37m APT CHECK \033[0m"
-apt check
+apt-get check
 echo #
 echo  "\033[43;30m <--- END OF PRE-UPDATE CLEANING \033[0m"
 
@@ -147,7 +147,7 @@ echo  "\033[44;37m APT PURGE \033[0m"
 apt purge
 echo #
 echo  "\033[44;37m APT CHECK \033[0m"
-apt check
+apt-get check
 echo #
 
 echo  "\033[43;30m ---> CACHE CLEANING \033[0m"
