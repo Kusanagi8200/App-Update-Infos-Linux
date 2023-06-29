@@ -16,7 +16,7 @@ then
 fi
 
 #WARNING UPDATE
-echo  "\033[5;41;37m ATTENTION. UNE MISE A JOUR PEUT ENDOMMAGER VOTRE SYSTEME \033[0m"
+echo  "\033[5;41;37m WARNING: AN UPDATE CAN DAMAGE YOUR SYSTEM \033[0m"
 confirm()
 {
     read -r -p "${1} [y/N] " response
@@ -31,12 +31,12 @@ confirm()
     esac
 }
 
-if confirm "VOULEZ VOUS CONTINUER ?"; then
+if confirm "DO YOU WANT TO CONTINUE ?"; then
    echo #
-   echo  "\033[44;37m ---> POURSUITE DE LA MISE A A JOUR <--- \033[0m"
+   echo  "\033[44;37m ---> UPDATING IN PROGRESS <--- \033[0m"
 else
     echo #
-    echo  "\033[44;37m ---> FIN DE LA MISE A JOUR <--- \033[0m"
+    echo  "\033[44;37m ---> UPDATE COMPLETE <--- \033[0m"
     exit
 fi
 
@@ -156,11 +156,11 @@ rm -r -f ~/.local/share/Trash/files/*
 echo  "\033[44;37m DONE \033[0m"
 echo #
 
-echo  "\033[43;30m ---> NETTOYAGE DES CONFIG DE PAQUETS \033[0m"
+echo  "\033[43;30m ---> CLEANING PACKAGE CONFIGURATIONS \033[0m"
 if [ "$(dpkg -l | grep ^rc)" ]; then
      dpkg -P $(dpkg -l | awk '/^rc/{print $2}')
 else
-    echo "\033[44;37m PAS DE PAQUETS À PURGER \033[0m"
+    echo "\033[44;37m NO PACKAGES TO BE PURGED \033[0m"
 fi
 echo #
 
@@ -213,7 +213,7 @@ fi
 echo #
 
 echo # 
-echo  "\033[43;30m ---> FICHIER LOG ERREUR MAJ \033[0m"
+echo  "\033[43;30m ---> NO PACKAGES TO BE PURGED \033[0m"
 
 if [ -e /var/log/update_upgrade.err ] && [ /var/log/update_upgrade.err -nt /var/log/update_upgrade.err ]
 then
