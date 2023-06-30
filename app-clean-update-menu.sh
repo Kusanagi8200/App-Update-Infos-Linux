@@ -50,13 +50,13 @@ $(ColorGreen ' 4 --> ') $(ColorGreen 'Clean-script.eng ........//')
 
 $(ColorGreen ' 5 --> ') $(ColorGreen 'Clean-script-fast.eng ...//')
 
-$(ColorGreen ' 6 --> ') $(ColorGreen 'boot-sequence-check.sh ..//')
+$(ColorGreen ' 6 --> ') $(ColorGreen 'boot-sequence-check    ..//')
 
-$(ColorGreen ' 7 --> ') $(ColorGreen 'check-network.sh ........//')
+$(ColorGreen ' 7 --> ') $(ColorGreen 'check-network ...........//')
 
-$(ColorGreen ' 8 --> ') $(ColorGreen 'hardware-infos.sh .......//')
+$(ColorGreen ' 8 --> ') $(ColorGreen 'hardware-infos ..........//')
 
-$(ColorGreen ' 9 --> ') $(ColorGreen 'system-infos.sh .........//')
+$(ColorGreen ' 9 --> ') $(ColorGreen 'system-infos ............//')
 
 $(ColorRed   ' 0 --> ') $(ColorRed   'EXIT ....................//') 
 
