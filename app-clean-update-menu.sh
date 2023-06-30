@@ -50,7 +50,7 @@ $(ColorGreen ' 4 --> ') $(ColorGreen 'Clean-script.eng ........//')
 
 $(ColorGreen ' 5 --> ') $(ColorGreen 'Clean-script-fast.eng ...//')
 
-$(ColorGreen ' 6 --> ') $(ColorGreen 'boot-sequence-check    ..//')
+$(ColorGreen ' 6 --> ') $(ColorGreen 'boot-sequence-check .....//')
 
 $(ColorGreen ' 7 --> ') $(ColorGreen 'check-network ...........//')
 
