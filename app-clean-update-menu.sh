@@ -48,7 +48,7 @@ $(ColorGreen ' 3 --> ') $(ColorGreen 'Clean-script-vm .........//')
 
 $(ColorGreen ' 4 --> ') $(ColorGreen 'Clean-script.eng ........//')
 
-$(ColorGreen ' 5 --> ') $(ColorGreen 'Clean-script-fast.eng ...//')
+$(ColorGreen ' 5 --> ') $(ColorGreen 'Clean-script-fast.eng ...//')          KUSANAGI8200
 
 $(ColorGreen ' 6 --> ') $(ColorGreen 'boot-sequence-check .....//')
 
