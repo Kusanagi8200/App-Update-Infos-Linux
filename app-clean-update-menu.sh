@@ -58,7 +58,7 @@ $(ColorGreen ' 8 --> ') $(ColorGreen 'hardware-infos.sh .......//')
 
 $(ColorGreen ' 9 --> ') $(ColorGreen 'system-infos.sh .........//')
 
-$(ColorRed   ' 0 --> ') $(ColorRed 'EXIT ......................//') 
+$(ColorRed   ' 0 --> ') $(ColorRed   'EXIT ....................//') 
 
 $(ColorGreen 'SCRIPT NUMBER ..............// = ') "
         read a
