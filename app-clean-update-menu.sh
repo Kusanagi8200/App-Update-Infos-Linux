@@ -16,12 +16,13 @@ fi
 echo #
 
 echo  "_  ___   _ ____    _    _   _    _    ____ ___ ___ ____   ___   ___" 
-echo "| |/ / | | / ___|  / \  | \ | |  / \  / ___|_ _( _ )___ \ / _ \ / _ \ "
+echo "| |/ / | | / ___|  / \  | \ | |  / \  / ___|_ _( _ )___ \ / _ \ / _ \"
 echo "| ' /| | | \___ \ / _ \ |  \| | / _ \| |  _ | |/ _ \ __) | | | | | | |"
 echo "| . \| |_| |___) / ___ \| |\  |/ ___ \ |_| || | (_) / __/| |_| | |_| |"
-echo "|_|\_\\___/|____/_/   \_\_| \_/_/   \_\____|___\___/_____|\___/ \___/ "
+echo "|_|\_\\___/|____/_/   \_\_| \_/_/   \_\____|___\___/_____|\___/ \___/"
                                                                        
-
+echo #
+echo #
 ##
 # Color  Variables
 ##
@@ -55,7 +56,7 @@ $(ColorGreen ' 3 --> ') $(ColorGreen 'Clean-script-vm .........//')
 
 $(ColorGreen ' 4 --> ') $(ColorGreen 'Clean-script.eng ........//')
 
-$(ColorGreen ' 5 --> ') $(ColorGreen 'Clean-script-fast.eng ...//')          KUSANAGI8200
+$(ColorGreen ' 5 --> ') $(ColorGreen 'Clean-script-fast.eng ...//')          
 
 $(ColorGreen ' 6 --> ') $(ColorGreen 'boot-sequence-check .....//')
 
