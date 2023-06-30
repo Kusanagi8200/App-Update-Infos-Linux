@@ -67,7 +67,11 @@ $(ColorGreen 'SCRIPT NUMBER ..............// = ') "
 	        2) sh clean-script-fast.sh ; menu ;;
 	        3) sh clean-script-vm.sh ; menu ;;
 	        4) sh clean-script.eng.sh ; menu ;;
-                5) sh clean-script-fast.eng.sh;;
+                5) sh clean-script-fast.eng.sh ; menu ;;
+         	6) sh boot-sequence-check.sh ; menu ;;
+	  	7) sh check-network.sh ; menu ;;
+    		8) sh hardware-infos.sh ; menu ;;
+      		9) sh system-infos.sh ; menu ;;  
 		0) exit 0 ;;
 		*) echo -e $(ColorRed 'MAUVAIS CHOIX ...................//')
         esac
