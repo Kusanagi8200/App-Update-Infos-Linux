@@ -6,22 +6,14 @@
 # This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY.
 
 echo # 
-echo -e "\033[43;30m APP CLEAN AND UPDATE LINUX / Copyright (C) Kusanagi8200/2023 \033[0m"
+echo -e "\033[46;30m UPDATE - CLEAN - SYSTEM - NETWORK / Kusanagi8200/2023 \033[0m"
 
 if [ `whoami` != "root" ]
 then
         echo -e "\033[5;41;30mATTENTION. VOUS DEVEZ AVOIR LES DROITS SUDO POUR LANCER CE SCRIPT \033[0m"
         exit 1
 fi
-echo #
 
-echo "   _  ___   _ ____    _    _   _    _    ____ ___ ___ ____   ___   ___   " 
-echo "  | |/ / | | / ___|  / \  | \ | |  / \  / ___|_ _( _ )___ \ / _ \ / _ \  "
-echo "  | ' /| | | \___ \ / _ \ |  \| | / _ \| |  _ | |/ _ \ __) | | | | | | | "
-echo "  | . \| |_| |___) / ___ \| |\  |/ ___ \ |_| || | (_) / __/| |_| | |_| | "
-echo "  |_|\_\\___/|____/_/   \_\_| \_/_/     \_\____|___\___/_____|\___/ \___/  "
-                                                                       
-echo #
 echo #
 ##
 # Color  Variables
@@ -48,25 +40,25 @@ echo -e "\033[43;30m MENU SCRIPTS ...................//\033[0m"
 
 menu(){
 echo -ne "
-$(ColorGreen ' 1 --> ') $(ColorGreen 'Clean-script ............//')
+$(ColorGreen ' 1 --> ') $(ColorGreen 'Clean-script ..............//__________________')
 
-$(ColorGreen ' 2 --> ') $(ColorGreen 'Clean-script-fast .......//')
+$(ColorGreen ' 2 --> ') $(ColorGreen 'Clean-script-fast .........//__________________')
 
-$(ColorGreen ' 3 --> ') $(ColorGreen 'Clean-script-vm .........//') 
+$(ColorGreen ' 3 --> ') $(ColorGreen 'Clean-script-vm ...........//__________________') 
 
-$(ColorGreen ' 4 --> ') $(ColorGreen 'Clean-script.eng ........//')
+$(ColorGreen ' 4 --> ') $(ColorGreen 'Clean-script.eng ..........//__________________')
 
-$(ColorGreen ' 5 --> ') $(ColorGreen 'Clean-script-fast.eng ...//')          
+$(ColorGreen ' 5 --> ') $(ColorGreen 'Clean-script-fast.eng .....//__________________')          
 
-$(ColorGreen ' 6 --> ') $(ColorGreen 'boot-sequence-check .....//')
+$(ColorGreen ' 6 --> ') $(ColorGreen 'boot-sequence-check .......//__________________')
 
-$(ColorGreen ' 7 --> ') $(ColorGreen 'check-network ...........//')
+$(ColorGreen ' 7 --> ') $(ColorGreen 'check-network .............//__________________')
 
-$(ColorGreen ' 8 --> ') $(ColorGreen 'hardware-infos ..........//')
+$(ColorGreen ' 8 --> ') $(ColorGreen 'hardware-infos ............//__________________')
 
-$(ColorGreen ' 9 --> ') $(ColorGreen 'system-infos ............//')
+$(ColorGreen ' 9 --> ') $(ColorGreen 'system-infos ..............//__________________')
 
-$(ColorRed   ' 0 --> ') $(ColorRed   'EXIT ....................//') 
+$(ColorRed   ' 0 --> ') $(ColorRed   'EXIT ......................//__________________')
 
 $(ColorGreen 'SCRIPT NUMBER ..............// = ') "
         read a
