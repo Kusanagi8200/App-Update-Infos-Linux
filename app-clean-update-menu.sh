@@ -41,16 +41,27 @@ echo -e "\033[43;30m MENU SCRIPTS ...................//\033[0m"
 menu(){
 echo -ne "
 $(ColorGreen ' 01 --> ') $(ColorGreen 'UPDATE-SCRIPT ..............//__________________')
+
 $(ColorGreen ' 02 --> ') $(ColorGreen 'UPDATE-SCRIPT-FAST .........//__________________')
-$(ColorGreen ' 03 --> ') $(ColorGreen 'UPDATE-SCRIPT-VM ...........//__________________') 
+
+$(ColorGreen ' 03 --> ') $(ColorGreen 'UPDATE-SCRIPT-VM ...........//__________________')
+
 $(ColorGreen ' 04 --> ') $(ColorGreen 'UPDATE-SCRIPT-ENG ..........//__________________')
-$(ColorGreen ' 05 --> ') $(ColorGreen 'UPDATE-SCRIPT-FAST-ENG .....//__________________')          
+
+$(ColorGreen ' 05 --> ') $(ColorGreen 'UPDATE-SCRIPT-FAST-ENG .....//__________________')
+
 $(ColorGreen ' 06 --> ') $(ColorGreen 'BOOT-SEQUENCE-CHECK ........//__________________')
+
 $(ColorGreen ' 07 --> ') $(ColorGreen 'CHECK-NETWORK ..............//__________________')
+
 $(ColorGreen ' 08 --> ') $(ColorGreen 'HARDWARE-INFOS .............//__________________')
+
 $(ColorGreen ' 09 --> ') $(ColorGreen 'SYSTEM-INFOS ...............//__________________')
+
 $(ColorGreen ' 10 --> ') $(ColorGreen 'UPDATE-NOCOLORS ............//__________________')
+
 $(ColorRed '  00 --> ') $(ColorRed   'EXIT .......................//__________________')
+
 $(ColorGreen ' SCRIPT NUMBER ..............// = ') "
         read a
         case $a in
