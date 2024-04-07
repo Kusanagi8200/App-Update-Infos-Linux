@@ -6,15 +6,16 @@ This bash script provides an interface to execute a variety of sub-scripts that 
 
 The script displays a menu with several options, each corresponding to a different sub-script:
 
-1. **CLEAN-SCRIPT**: Cleans the system.
-2. **CLEAN-SCRIPT-FAST**: Quick system cleaning.
-3. **CLEAN-SCRIPT-VM**: Cleaning specifically for virtual machines.
-4. **CLEAN-SCRIPT-ENG**: English version of the cleaning script.
-5. **CLEAN-SCRIPT-FAST-ENG**: English version of the quick cleaning script.
-6. **BOOT-SEQUENCE-CHECK**: Checks the boot sequence.
-7. **CHECK-NETWORK**: Diagnoses network problems.
-8. **HARDWARE-INFOS**: Displays hardware information.
-9. **SYSTEM-INFOS**: Displays system information.
+01. **UPDATE-SCRIPT**: Cleans the system.
+02. **UPDATE-SCRIPT-FAST**: Quick system cleaning.
+03. **UPDATE-SCRIPT-VM**: Cleaning specifically for virtual machines.
+04. **UPDATE-SCRIPT-ENG**: English version of the cleaning script.
+05. **UPDATE-SCRIPT-FAST-ENG**: English version of the quick cleaning script.
+06. **BOOT-SEQUENCE-CHECK**: Checks the boot sequence.
+07. **CHECK-NETWORK**: Diagnoses network problems.
+08. **HARDWARE-INFOS**: Displays hardware information.
+09. **SYSTEM-INFOS**: Displays system information.
+10.**UPDATE-SCRIPT**: No colors script.
 0. **EXIT**: Exits the script.
 
 ## User Rights Verification
