@@ -70,7 +70,7 @@ $(ColorGreen 'SCRIPT NUMBER ..............// = ') "
 	        03) sh update-script-vm.sh ; menu ;;
 	        04) sh update-script.eng.sh ; menu ;;
                 05) sh update-script-fast.eng.sh ; menu ;;
-         	06) sh boot-sequence-check.sh ; menu ;;
+		06) sh boot-sequence-check.sh ; menu ;;
 	  	07) sh check-network.sh ; menu ;;
     		08) sh hardware-infos.sh ; menu ;;
       		09) sh system-infos.sh ; menu ;; 
