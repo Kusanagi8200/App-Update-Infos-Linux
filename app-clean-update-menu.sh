@@ -65,20 +65,21 @@ $(ColorRed   '  00 --> ') $(ColorRed   'EXIT .......................//__________
 $(ColorGreen 'SCRIPT NUMBER ..............// = ') "
         read a
         case $a in
-	        01) sh update-script.sh ; menu ;;
-	        02) sh update-script-fast.sh ; menu ;;
-	        03) sh update-script-vm.sh ; menu ;;
-	        04) sh update-script.eng.sh ; menu ;;
-                05) sh update-script-fast.eng.sh ; menu ;;
-		06) sh boot-sequence-check.sh ; menu ;;
-	  	07) sh check-network.sh ; menu ;;
-    		08) sh hardware-infos.sh ; menu ;;
-      		09) sh system-infos.sh ; menu ;; 
-	        10) sh update-nocolors.sh ; menu ;; 
-		00) exit 00 ;;
-		*) echo -e $(ColorRed 'MAUVAIS CHOIX .........................................//')
+01) sh update-script.sh ; menu ;;
+02) sh update-script-fast.sh ; menu ;;
+03) sh update-script-vm.sh ; menu ;;
+04) sh update-script.eng.sh ; menu ;;
+05) sh update-script-fast.eng.sh ; menu ;;
+06) sh boot-sequence-check.sh ; menu ;;
+07) sh check-network.sh ; menu ;;
+08) sh hardware-infos.sh ; menu ;;
+09) sh system-infos.sh ; menu ;; 
+10) sh update-nocolors.sh ; menu ;; 
+00) exit 00 ;;
+*) echo -e $(ColorRed 'MAUVAIS CHOIX .........................................//')
         esac
 }
+
 
 # Call the menu function
 menu
