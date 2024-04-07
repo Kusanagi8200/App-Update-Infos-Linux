@@ -60,22 +60,22 @@ $(ColorGreen ' 09 --> ') $(ColorGreen 'SYSTEM-INFOS ...............//___________
 
 $(ColorGreen ' 10 --> ') $(ColorGreen 'UPDATE-NOCOLORS ............//__________________')
 
-$(ColorRed   '    0 --> ') $(ColorRed   'EXIT .......................//__________________')
+$(ColorRed   '  00 --> ') $(ColorRed   'EXIT .......................//__________________')
 
 $(ColorGreen 'SCRIPT NUMBER ..............// = ') "
         read a
         case $a in
-	        1) sh update-script.sh ; menu ;;
-	        2) sh update-script-fast.sh ; menu ;;
-	        3) sh update-script-vm.sh ; menu ;;
-	        4) sh update-script.eng.sh ; menu ;;
-                5) sh update-script-fast.eng.sh ; menu ;;
-         	6) sh boot-sequence-check.sh ; menu ;;
-	  	7) sh check-network.sh ; menu ;;
-    		8) sh hardware-infos.sh ; menu ;;
-      		9) sh system-infos.sh ; menu ;; 
-	      10) sh update-nocolors.sh ; menu ;; 
-		0) exit 0 ;;
+	        01) sh update-script.sh ; menu ;;
+	        02) sh update-script-fast.sh ; menu ;;
+	        03) sh update-script-vm.sh ; menu ;;
+	        04) sh update-script.eng.sh ; menu ;;
+                05) sh update-script-fast.eng.sh ; menu ;;
+         	06) sh boot-sequence-check.sh ; menu ;;
+	  	07) sh check-network.sh ; menu ;;
+    		08) sh hardware-infos.sh ; menu ;;
+      		09) sh system-infos.sh ; menu ;; 
+	        10) sh update-nocolors.sh ; menu ;; 
+		00) exit 00 ;;
 		*) echo -e $(ColorRed 'MAUVAIS CHOIX .........................................//')
         esac
 }
