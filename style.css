@@ -1,0 +1,16 @@
+li {
+    margin-bottom: 10px;
+}
+
+.align-left {
+    text-align: left;
+    padding-left: 10px; /* Ajustez cette valeur selon vos besoins */
+}
+
+button:active {
+    background-color: blue;
+}
+
+.button-selected {
+    background-color: orange;
+}
