@@ -6,7 +6,7 @@
 # This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY.
 
 echo # 
-echo -e "\033[46;30m UPDATE - CLEAN - SYSTEM - NETWORK / Kusanagi8200/2023 \033[0m"
+echo -e "\033[46;30m UPDATE - CLEAN - SYSTEM - NETWORK / Kusanagi8200/2024 \033[0m"
 
 if [ `whoami` != "root" ]
 then
@@ -40,15 +40,15 @@ echo -e "\033[43;30m MENU SCRIPTS ...................//\033[0m"
 
 menu(){
 echo -ne "
-$(ColorGreen ' 01 --> ') $(ColorGreen 'CLEAN-SCRIPT ..............//__________________')
+$(ColorGreen ' 01 --> ') $(ColorGreen 'UPDATE-SCRIPT ..............//__________________')
 
-$(ColorGreen ' 02 --> ') $(ColorGreen 'CLEAN-SCRIPT-FAST .........//__________________')
+$(ColorGreen ' 02 --> ') $(ColorGreen 'UPDATE-SCRIPT-FAST .........//__________________')
 
-$(ColorGreen ' 03 --> ') $(ColorGreen 'CLEAN-SCRIPT-VM ...........//__________________') 
+$(ColorGreen ' 03 --> ') $(ColorGreen 'UPDATE-SCRIPT-VM ...........//__________________') 
 
-$(ColorGreen ' 04 --> ') $(ColorGreen 'CLEAN-SCRIPT-ENG ..........//__________________')
+$(ColorGreen ' 04 --> ') $(ColorGreen 'UPDATE-SCRIPT-ENG ..........//__________________')
 
-$(ColorGreen ' 05 --> ') $(ColorGreen 'CLEAN-SCRIPT-FAST-ENG .....//__________________')          
+$(ColorGreen ' 05 --> ') $(ColorGreen 'UPDATE-SCRIPT-FAST-ENG .....//__________________')          
 
 $(ColorGreen ' 06 --> ') $(ColorGreen 'BOOT-SEQUENCE-CHECK .......//__________________')
 
@@ -58,18 +58,18 @@ $(ColorGreen ' 08 --> ') $(ColorGreen 'HARDWARE-INFOS ............//____________
 
 $(ColorGreen ' 09 --> ') $(ColorGreen 'SYSTEM-INFOS ..............//__________________')
 
-$(ColorGreen ' 10 --> ') $(ColorGreen 'UPDATE-NOCOLORS ............//__________________')
+$(ColorGreen ' 10 --> ') $(ColorGreen 'UPDATE-NOCOLORS ..........//__________________')
 
 $(ColorRed   ' 0 --> ') $(ColorRed   'EXIT ......................//__________________')
 
 $(ColorGreen 'SCRIPT NUMBER ..............// = ') "
         read a
         case $a in
-	        1) sh clean-script.sh ; menu ;;
-	        2) sh clean-script-fast.sh ; menu ;;
-	        3) sh clean-script-vm.sh ; menu ;;
-	        4) sh clean-script.eng.sh ; menu ;;
-                5) sh clean-script-fast.eng.sh ; menu ;;
+	        1) sh update-script.sh ; menu ;;
+	        2) sh update-script-fast.sh ; menu ;;
+	        3) sh update-script-vm.sh ; menu ;;
+	        4) sh update-script.eng.sh ; menu ;;
+                5) sh update-script-fast.eng.sh ; menu ;;
          	6) sh boot-sequence-check.sh ; menu ;;
 	  	7) sh check-network.sh ; menu ;;
     		8) sh hardware-infos.sh ; menu ;;
