@@ -40,25 +40,25 @@ echo -e "\033[43;30m MENU SCRIPTS ...................//\033[0m"
 
 menu(){
 echo -ne "
-$(ColorGreen ' 1 --> ') $(ColorGreen 'CLEAN-SCRIPT ..............//__________________')
+$(ColorGreen ' 01 --> ') $(ColorGreen 'CLEAN-SCRIPT ..............//__________________')
 
-$(ColorGreen ' 2 --> ') $(ColorGreen 'CLEAN-SCRIPT-FAST .........//__________________')
+$(ColorGreen ' 02 --> ') $(ColorGreen 'CLEAN-SCRIPT-FAST .........//__________________')
 
-$(ColorGreen ' 3 --> ') $(ColorGreen 'CLEAN-SCRIPT-VM ...........//__________________') 
+$(ColorGreen ' 03 --> ') $(ColorGreen 'CLEAN-SCRIPT-VM ...........//__________________') 
 
-$(ColorGreen ' 4 --> ') $(ColorGreen 'CLEAN-SCRIPT-ENG ..........//__________________')
+$(ColorGreen ' 04 --> ') $(ColorGreen 'CLEAN-SCRIPT-ENG ..........//__________________')
 
-$(ColorGreen ' 5 --> ') $(ColorGreen 'CLEAN-SCRIPT-FAST-ENG .....//__________________')          
+$(ColorGreen ' 05 --> ') $(ColorGreen 'CLEAN-SCRIPT-FAST-ENG .....//__________________')          
 
-$(ColorGreen ' 6 --> ') $(ColorGreen 'BOOT-SEQUENCE-CHECK .......//__________________')
+$(ColorGreen ' 06 --> ') $(ColorGreen 'BOOT-SEQUENCE-CHECK .......//__________________')
 
-$(ColorGreen ' 7 --> ') $(ColorGreen 'CHECK-NETWORK .............//__________________')
+$(ColorGreen ' 07 --> ') $(ColorGreen 'CHECK-NETWORK .............//__________________')
 
-$(ColorGreen ' 8 --> ') $(ColorGreen 'HARDWARE-INFOS ............//__________________')
+$(ColorGreen ' 08 --> ') $(ColorGreen 'HARDWARE-INFOS ............//__________________')
 
-$(ColorGreen ' 9 --> ') $(ColorGreen 'SYSTEM-INFOS ..............//__________________')
+$(ColorGreen ' 09 --> ') $(ColorGreen 'SYSTEM-INFOS ..............//__________________')
 
-$(ColorGreen ' 10 --> ') $(ColorGreen 'SYSTEM-INFOS ..............//__________________')
+$(ColorGreen ' 10 --> ') $(ColorGreen 'UPDATE-NOCOLORS ..............//__________________')
 
 $(ColorRed   ' 0 --> ') $(ColorRed   'EXIT ......................//__________________')
 
