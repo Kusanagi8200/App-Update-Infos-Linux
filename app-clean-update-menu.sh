@@ -58,7 +58,7 @@ $(ColorGreen ' 08 --> ') $(ColorGreen 'HARDWARE-INFOS ............//____________
 
 $(ColorGreen ' 09 --> ') $(ColorGreen 'SYSTEM-INFOS ..............//__________________')
 
-$(ColorGreen ' 10 --> ') $(ColorGreen 'UPDATE-NOCOLORS ..............//__________________')
+$(ColorGreen ' 10 --> ') $(ColorGreen 'UPDATE-NOCOLORS ............//__________________')
 
 $(ColorRed   ' 0 --> ') $(ColorRed   'EXIT ......................//__________________')
 
