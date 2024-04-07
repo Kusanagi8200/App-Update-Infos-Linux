@@ -76,7 +76,7 @@ $(ColorGreen 'SCRIPT NUMBER ..............// = ') "
       		9) sh system-infos.sh ; menu ;; 
 	      10) sh update-nocolors.sh ; menu ;; 
 		0) exit 0 ;;
-		*) echo -e $(ColorRed 'MAUVAIS CHOIX ...........................................//')
+		*) echo -e $(ColorRed 'MAUVAIS CHOIX .........................................//')
         esac
 }
 
