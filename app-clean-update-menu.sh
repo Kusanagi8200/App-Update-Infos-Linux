@@ -58,6 +58,8 @@ $(ColorGreen ' 8 --> ') $(ColorGreen 'HARDWARE-INFOS ............//_____________
 
 $(ColorGreen ' 9 --> ') $(ColorGreen 'SYSTEM-INFOS ..............//__________________')
 
+$(ColorGreen ' 10 --> ') $(ColorGreen 'SYSTEM-INFOS ..............//__________________')
+
 $(ColorRed   ' 0 --> ') $(ColorRed   'EXIT ......................//__________________')
 
 $(ColorGreen 'SCRIPT NUMBER ..............// = ') "
@@ -71,7 +73,8 @@ $(ColorGreen 'SCRIPT NUMBER ..............// = ') "
          	6) sh boot-sequence-check.sh ; menu ;;
 	  	7) sh check-network.sh ; menu ;;
     		8) sh hardware-infos.sh ; menu ;;
-      		9) sh system-infos.sh ; menu ;;  
+      		9) sh system-infos.sh ; menu ;; 
+	      10) sh update-nocolors.sh ; menu ;; 
 		0) exit 0 ;;
 		*) echo -e $(ColorRed 'MAUVAIS CHOIX ...................//')
         esac
