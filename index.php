@@ -53,7 +53,7 @@
          <h2 class="highlight"<strong>MAINTENANCE SCRIPT FOR LINUX SYSTEM</strong></h2>
     <div class="button-container">
         <!-- Chaque bouton dans son propre formulaire pointant vers un script PHP spécifique -->
-        <form action="test-shell.php" method="post"><button class="button" type="submit">UPDATE-SCRIPT</button></form>
+	<form action="test-shell.php" method="post" target="_blank"><button class="button" type="submit">TEST</button></form>
         <form action="update-script-fast.php" method="post"><button class="button" type="submit">UPDATE-SCRIPT-FAST</button></form>
         <form action="update-script-vm.php" method="post"><button class="button" type="submit">UPDATE-SCRIPT-VM</button></form>
         <form action="update-script-eng.php" method="post"><button class="button" type="submit">UPDATE-SCRIPT-ENG</button></form>
