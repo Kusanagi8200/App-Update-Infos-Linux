@@ -1,6 +1,8 @@
-# System Maintenance and Diagnostic Script
+# System Maintenance Information and Diagnostic Script
 
-This bash script provides an interface to execute a variety of sub-scripts that perform system cleaning, diagnostic, and network information tasks.
+# Bash version and Webapp version
+
+The bash script provides an interface to execute a variety of sub-scripts that perform system cleaning, diagnostic, and network information tasks.
 
 ## Features
 
@@ -37,9 +39,3 @@ The script uses a menu structure to allow the user to choose from the different 
 
 The script is distributed under the GNU General Public License, version 3 or later.
 
-## Usage
-
-To use this script, ensure it is executable:
-
-```bash
-chmod +x script_name.sh
