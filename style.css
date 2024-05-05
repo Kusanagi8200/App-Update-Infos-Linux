@@ -14,3 +14,9 @@ button:active {
 .button-selected {
     background-color: orange;
 }
+
+.highlight {
+    background-color: orange; /* Couleur de fond orange */
+    color: black;           /* Texte en noir */
+    padding: 5px;           /* Ajoute un peu de padding autour du texte */
+}
