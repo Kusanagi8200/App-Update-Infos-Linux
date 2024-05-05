@@ -1,6 +1,6 @@
 ## System Maintenance Information and Diagnostic Script
 
-## Bash version and Webapp version
+## Bash version 
 
 The bash script provides an interface to execute a variety of sub-scripts that perform system cleaning, diagnostic, and network information tasks.
 
