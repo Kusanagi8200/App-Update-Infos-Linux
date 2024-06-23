@@ -73,13 +73,16 @@ $(ColorGreen ' SCRIPT NUMBER ..............// = ') "
 06) sh boot-sequence-check.sh ; menu ;;
 07) sh check-network.sh ; menu ;;
 08) sh hardware-infos.sh ; menu ;;
-09) sh system-infos.sh ; menu ;; 
-10) sh update-nocolors.sh ; menu ;; 
-00) exit 00 ;;
+09) sh system-infos.sh ; menu ;;
+10) sh update-nocolors.sh ; menu ;;
+00)
+   ps aux | grep 'gnome-terminal' | grep -v grep | awk '{print $2}' | xargs kill
+            exit 0
+            ;;
+
 *) echo -e $(ColorRed 'MAUVAIS CHOIX .........................................//')
         esac
 }
-
 
 # Call the menu function
 menu
