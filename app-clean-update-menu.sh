@@ -60,7 +60,7 @@ $(ColorGreen ' 09 --> ') $(ColorGreen 'SYSTEM-INFOS ...............//___________
 
 $(ColorGreen ' 10 --> ') $(ColorGreen 'UPDATE-NOCOLORS ............//__________________')
 
-$(ColorRed '  00 --> ') $(ColorRed   'EXIT .......................//__________________')
+$(ColorRed   ' 00 --> ') $(ColorRed   'EXIT .......................//__________________')
 
 $(ColorGreen ' SCRIPT NUMBER ..............// = ') "
         read a
