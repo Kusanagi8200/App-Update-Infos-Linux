@@ -57,12 +57,12 @@ echo #
 
 echo #
 echo "\033[43;30m TEMPS DE DÉMARRAGE PAR UNITÉS ..........................//\033[0m"
-systemd-analyze critical-chain
+SYSTEMD_PAGER= systemd-analyze critical-chain # Désactiver le pager
 echo # 
 
 echo #
 echo "\033[43;30m UNITÉS NON DÉMARRÉES AU BOOT .......................................//\033[0m"
-systemctl --failed 
+SYSTEMD_PAGER= systemctl --failed 
 echo #
 
 echo #
