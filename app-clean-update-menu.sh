@@ -6,8 +6,8 @@
 # This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY.
 
 echo #
-echo -e "\033[38;5;214m░█▄▀░█▒█░▀█▀▒▄▀▄▒█▀▄▒█▀▄░░░▒░░░░█▒█░█▀█░░░▄█         \033[0m"
-echo -e "\033[38;5;214m░█▒█░▀▄█░█▄▄░█▀█░█▀▒░█▀▒▒░░▀▀▒░░▀▄▀░█▄█░▄░░█         \033[0m"
+echo -e "\033[38;5;214m░█▄▀░█▒█░▀█▀▒▄▀▄▒█▀▄▒█▀▄░░░▒░░░░█▒█░█▀█░░░▄█ 2024    \033[0m"
+echo -e "\033[38;5;214m░█▒█░▀▄█░█▄▄░█▀█░█▀▒░█▀▒▒░░▀▀▒░░▀▄▀░█▄█░▄░░█ Kusanagi8200\033[0m"
 echo -e "\033[43;30mKuzApp Project --> CLEAN - UPDATE - INFOS SYSTEM - LINUX \033[0m"
 
 if [ `whoami` != "root" ]
