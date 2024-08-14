@@ -5,10 +5,10 @@
 
 # This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY.
 
-echo # 
-echo -e "\033[43;30m KusApp -> CLEAN - UPDATE - INFOS SYSTEM ..............//\033[0m"
 echo #
-echo -e "\033[43;30m GitHub --> Kusanagi8200 / 2024 \033[0m"
+echo -e "\033[38;5;214m░█▄▀░█▒█░▀█▀▒▄▀▄▒█▀▄▒█▀▄░░░▒░░░░█▒█░█▀█░░░▄█         \033[0m"
+echo -e "\033[38;5;214m░█▒█░▀▄█░█▄▄░█▀█░█▀▒░█▀▒▒░░▀▀▒░░▀▄▀░█▄█░▄░░█         \033[0m"
+echo -e "\033[43;30mKuzApp Project --> CLEAN - UPDATE - INFOS SYSTEM - LINUX \033[0m"
 
 if [ `whoami` != "root" ]
 then
@@ -35,8 +35,6 @@ ColorGreen(){
 ColorRed(){
 	echo -ne $red$1$clear
 }
-
-
 
 echo -e "\033[43;30m MENU .....//\033[0m"
 
