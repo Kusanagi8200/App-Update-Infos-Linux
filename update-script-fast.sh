@@ -45,23 +45,23 @@ echo #
 echo #
 echo  "\033[43;30m ---> NETTOYAGE PRE-MAJ                                  \033[0m"
 echo #
-echo  "\033[44;37m APT CLEAN \033[0m"
+echo  "\033[44;37m APT CLEAN      \033[0m"
 apt clean 
 echo Done
 echo #
-echo  "\033[44;37m APT AUTOCLEAN \033[0m"
+echo  "\033[44;37m APT AUTOCLEAN  \033[0m"
 apt autoclean
 echo #
-echo  "\033[44;37m APT REMOVE \033[0m"
+echo  "\033[44;37m APT REMOVE     \033[0m"
 apt remove 
 echo #
 echo  "\033[44;37m APT AUTOREMOVE \033[0m"
 apt autoremove
 echo #
-echo  "\033[44;37m APT PURGE \033[0m"
+echo  "\033[44;37m APT PURGE      \033[0m"
 apt purge
 echo #
-echo "\033[44;37m APT CHECK \033[0m"
+echo  "\033[44;37m APT CHECK      \033[0m"
 apt-get check
 echo #
 echo  "\033[42;97m <--- FIN DU NETTOYAGE PRE-MAJ                           \033[0m"
@@ -89,41 +89,41 @@ echo #
 
 echo  "\033[43;30m ---> NETTOYAGE POST-MAJ                                 \033[0m"
 echo #
-echo  "\033[44;37m APT CLEAN \033[0m"
+echo  "\033[44;37m APT CLEAN      \033[0m"
 apt clean 
 echo Done
 echo #
-echo  "\033[44;37m APT AUTOCLEAN \033[0m"
+echo  "\033[44;37m APT AUTOCLEAN  \033[0m"
 apt autoclean
 echo #
-echo  "\033[44;37m APT REMOVE \033[0m"
+echo  "\033[44;37m APT REMOVE     \033[0m"
 apt remove 
 echo #
 echo  "\033[44;37m APT AUTOREMOVE \033[0m"
 apt autoremove
 echo #
-echo  "\033[44;37m APT PURGE \033[0m"
+echo  "\033[44;37m APT PURGE      \033[0m"
 apt purge
 echo #
-echo  "\033[44;37m APT CHECK \033[0m"
+echo  "\033[44;37m APT CHECK      \033[0m"
 apt-get check
 echo #
 
 echo  "\033[43;30m ---> NETTOYAGE DU CACHE                                 \033[0m"
 sync; echo 3 > /proc/sys/vm/drop_caches
-echo  "\033[44;37m DONE \033[0m"
+echo "\033[44;37m DONE           \033[0m"
 echo # 
 
 echo  "\033[43;30m ---> NETTOYAGE POUBELLE                                 \033[0m"
 rm -r -f ~/.local/share/Trash/files/*
-echo  "\033[44;37m DONE \033[0m"
+echo "\033[44;37m DONE           \033[0m"
 echo #
 
-echo  "\033[43;30m ---> NETTOYAGE DES CONFIG DE PAQUETS                    \033[0m"
+echo "\033[43;30m ---> NETTOYAGE DES CONFIG DE PAQUETS                    \033[0m"
 if [ "$(dpkg -l | grep ^rc)" ]; then
      dpkg -P $(dpkg -l | awk '/^rc/{print $2}')
 else
-    echo "\033[42;97m PAS DE PAQUETS À PURGER \033[0m"
+echo "\033[44;37m DONE           \033[0m"
 fi
 echo #
 
@@ -136,11 +136,11 @@ echo #
 echo  "\033[43;30m ---> FICHIER LOG ERREUR MAJ                             \033[0m"
 if [ -e /var/log/update_upgrade.err ] && [ /var/log/update_upgrade.err -nt /var/log/update_upgrade.err ]
 then
-    echo  "\033[5;41;37m ATTENTION \033[0m"
+echo "\033[5;41;37m ATTENTION     \033[0m"
     cat /var/log/update_upgrade.err
     echo
 else
-    echo  "\033[44;37m NO UPDATE ERROR \033[0m"
+echo "\033[42;97m NO ERROR       \033[0m"
 fi
 echo #
 
@@ -162,8 +162,10 @@ confirm()
 if confirm "REBOOT ?"; then
    reboot
 else
-    echo #
-echo  "\033[5;44;30m                  ---> FIN DU SCRIPT <---                \033[0m"
+echo # 
+echo "\033[43;30m 02 --> UPDATE-SCRIPT-FAST ..........//____________ENDING\033[0m"
+echo #
+echo "\033[5;42;97m                  ---> FIN DU SCRIPT <---                \033[0m"
 fi
 echo #
 echo #

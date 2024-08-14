@@ -40,7 +40,7 @@ else
 echo #
 echo "\033[43;30m 01 -->  UPDATE-SCRIPT ..............//____________ENDING\033[0m"
 echo #
-echo "\033[44;37m            ---> FIN DE LA MISE A JOUR <---              \033[0m"
+echo "\033[5,42;97m            ---> FIN DE LA MISE A JOUR <---              \033[0m"
 
 echo #
 echo #
@@ -129,9 +129,18 @@ if confirm "UPGRADE ?"; then
    apt upgrade && apt --fix-broken install
 else
 echo #
-echo  "\033[44;30m ---> PAS D'UPGRADE <--- \033[0m"
+echo "\033[44;30m                   ---> PAS D'UPGRADE <---               \033[0m"
 echo #
-echo  "\033[44;30m ---> FIN DU SCRIPT <--- \033[0m"
+echo "\033[5;42;97m                  ---> FIN DU SCRIPT <---                \033[0m"
+
+echo #
+echo #
+echo #
+echo "\033[43;30m KusApp -> CLEAN - UPDATE - INFOS SYSTEM ..............//\033[0m"
+echo #
+echo "\033[43;30m GitHub --> Kusanagi8200 / 2024 \033[0m"
+echo #
+echo "\033[43;30m MENU .....//\033[0m"
     exit
 fi
 
