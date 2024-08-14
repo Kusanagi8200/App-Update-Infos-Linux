@@ -9,7 +9,7 @@
 
 echo # 
 echo # 
-echo "\033[44;30m CHECK BOOT SEQUENCE / LINUX ................................//\033[0m"
+echo "\033[44;30m CHECK BOOT SEQUENCE / LINUX ............................//\033[0m"
 
 if [ `whoami` != "root" ]
 then
@@ -18,8 +18,7 @@ then
 fi
 echo # 
 
-echo # 
-echo "\033[43;30m VERIFICATION DE L'ÉTAT DU SYSTÈME .......................................//\033[0m"
+echo "\033[43;30m VERIFICATION DE L'ÉTAT DU SYSTÈME ......................//\033[0m"
 
 check_system_state()  {
   state=$(systemctl is-system-running)
@@ -43,7 +42,7 @@ check_system_state
 echo #
 
 echo # 
-echo "\033[43;30m INFORMATIONS SYSTEME .......................................//\033[0m"
+echo "\033[43;30m INFORMATIONS SYSTEME ...................................//\033[0m"
 cat /proc/version
 echo #
 
@@ -51,7 +50,7 @@ cat /etc/os-release
 echo #
 
 echo #
-echo "\033[43;30m TEMPS DE DÉMARRAGE SYSTEME .................................//\033[0m"
+echo "\033[43;30m TEMPS DE DÉMARRAGE SYSTEME .............................//\033[0m"
 systemd-analyze time
 echo # 
 
@@ -61,39 +60,44 @@ SYSTEMD_PAGER= systemd-analyze critical-chain # Désactiver le pager
 echo # 
 
 echo #
-echo "\033[43;30m UNITÉS NON DÉMARRÉES AU BOOT .......................................//\033[0m"
+echo "\033[43;30m UNITÉS NON DÉMARRÉES AU BOOT ...........................//\033[0m"
 SYSTEMD_PAGER= systemctl --failed 
 echo #
 
 echo #
-echo "\033[43;30m LISTE DES SERVICES DÉMARRÉS ................................//\033[0m"
+echo "\033[43;30m LISTE DES SERVICES DÉMARRÉS ............................//\033[0m"
 service --status-all |grep -Ev "-"
 echo #
 
 echo #
-echo "\033[43;30m LISTE DES UNITÉS DÉMARRÉES ................................//\033[0m"
+echo "\033[43;30m LISTE DES UNITÉS DÉMARRÉES .............................//\033[0m"
 systemctl list-units --type=service --state=running | grep -v "\-.slice"
 echo #
 
 echo #
-echo "\033[43;30m LISTE DES SERVICES ETEINS ..................................//\033[0m"
+echo "\033[43;30m LISTE DES SERVICES ETEINS ..............................//\033[0m"
 service --status-all |grep -E " - "
 echo #
 
 echo #
-echo "\033[43;30m LISTE DES UNITÉS ÉTEINTES ................................//\033[0m"
+echo "\033[43;30m LISTE DES UNITÉS ÉTEINTES ..............................//\033[0m"
 systemctl list-units --type=service --state=inactive | grep -v "\-.slice"
 echo #
 
 echo #
-echo "\033[43;30m TEST CONNEXION RÉSEAU ......................................//\033[0m"
+echo "\033[43;30m TEST CONNEXION RÉSEAU ..................................//\033[0m"
 ping -v -c 4 1.1.1.1
 echo #
 
 echo #
-echo "\033[5;44;30m FIN DU CHECK BOOT SEQUENCE .................................//\033[0m"
+echo "\033[5;44;30m FIN DU CHECK BOOT SEQUENCE ...........................//\033[0m"
 echo #
 
 echo #
 echo #
-echo "\033[43;30m MENU CHECKS...........//\033[0m"
+echo # 
+echo "\033[43;30m KusApp -> CLEAN - UPDATE - INFOS SYSTEM ..............//\033[0m"
+echo #
+echo "\033[43;30m GitHub --> Kusanagi8200 / 2024 \033[0m"
+echo #
+echo "\033[43;30m MENU .....//\033[0m"

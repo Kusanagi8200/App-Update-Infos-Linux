@@ -7,16 +7,18 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 echo #
-echo  "\033[43;30m SCRIPT DE NETTOYAGE ET DE MISE À JOUR SYSTÈME LINUX / https://github.com/Kusanagi8200 \033[0m"
-
+echo #
+echo #
+echo "\033[43;30m 01 -->  UPDATE-SCRIPT ..............//_______ON PROGRESS\033[0m"
+echo #
 if [ `whoami` != "root" ]
 then
-        echo  "\033[5;41;30m ATTENTION. VOUS DEVEZ AVOIR LES DROITS SUDO POUR LANCER CE SCRIPT \033[0m"
+echo  "\033[5;41;30m   ATTENTION. VOUS DEVEZ AVOIR LES DROITS SUDO POUR LANCER CE SCRIPT   \033[0m"
         exit 1
 fi
 
 #WARNING UPDATE
-echo  "\033[5;41;37m ATTENTION. UNE MISE A JOUR PEUT ENDOMMAGER VOTRE SYSTEME \033[0m"
+echo  "\033[5;41;37m    ATTENTION --> UNE MAJ PEUT ENDOMMAGER VOTRE SYSTEME  \033[0m"
 confirm()
 {
     read -r -p "${1} [y/N] " response
@@ -32,11 +34,11 @@ confirm()
 }
 
 if confirm "VOULEZ VOUS CONTINUER ?"; then
-   echo #
-   echo  "\033[44;37m ---> POURSUITE DE LA MISE A A JOUR <--- \033[0m"
+echo #
+echo  "\033[44;37m          ---> POURSUITE DE LA MISE A JOUR <---          \033[0m"
 else
-    echo #
-    echo  "\033[44;37m ---> FIN DE LA MISE A JOUR <--- \033[0m"
+echo #
+echo  "\033[44;37m            ---> FIN DE LA MISE A JOUR <---              \033[0m"
     exit
 fi
 
@@ -45,7 +47,7 @@ echo #
 #Fonction qui vérifie la presence des fichiers de log et les crée au besoin. 
 
 echo #
-echo  "\033[43;30m ---> CHECK DES FICHIERS DE LOG \033[0m"
+echo  "\033[43;30m ---> CHECK DES FICHIERS DE LOG                         \033[0m"
 
 echo #
 if [  /var/log/update_upgrade.log ]
@@ -69,7 +71,7 @@ echo #
 #Séquence de nettoyage systeme update
 
 echo #
-echo  "\033[43;30m ---> NETTOYAGE PRE-MAJ \033[0m"
+echo  "\033[43;30m ---> NETTOYAGE PRE-MAJ                                 \033[0m"
 echo #
 echo  "\033[44;37m APT CLEAN \033[0m"
 apt clean 
@@ -90,14 +92,14 @@ echo #
 echo  "\033[44;37m APT CHECK \033[0m"
 apt-get check
 echo #
-echo  "\033[43;30m <--- FIN DU NETTOYAGE PRE-MAJ \033[0m"
+echo  "\033[43;30m <--- FIN DU NETTOYAGE PRE-MAJ                         \033[0m"
 
 echo #
 echo # 
 
 #Séquence de mise à jours des paquets
 
-echo  "\033[43;30m ---> MISE A JOUR DES PAQUETS \033[0m"
+echo  "\033[43;30m ---> MISE A JOUR DES PAQUETS                          \033[0m"
 apt update && apt list --upgradable
 
 confirm()
@@ -117,10 +119,10 @@ confirm()
 if confirm "UPGRADE ?"; then
    apt upgrade && apt --fix-broken install
 else
-    echo #
-    echo  "\033[44;30m ---> PAS D'UPGRADE <--- \033[0m"
-    echo #
-    echo  "\033[44;30m ---> FIN DU SCRIPT <--- \033[0m"
+echo #
+echo  "\033[44;30m ---> PAS D'UPGRADE <--- \033[0m"
+echo #
+echo  "\033[44;30m ---> FIN DU SCRIPT <--- \033[0m"
     exit
 fi
 
@@ -129,7 +131,7 @@ echo #
 
 #Séquence de nettoyage systeme post mise à jour
 
-echo  "\033[43;30m ---> NETTOYAGE POST-MAJ \033[0m"
+echo  "\033[43;30m ---> NETTOYAGE POST-MAJ                                \033[0m"
 echo #
 echo  "\033[44;37m APT CLEAN \033[0m"
 apt clean 
@@ -169,13 +171,13 @@ else
 fi
 echo #
 
-echo  "\033[43;30m <--- FIN DU NETTOYAGE POST-MAJ \033[0m"
+echo  "\033[43;30m <--- FIN DU NETTOYAGE POST-MAJ                         \033[0m"
 echo #
 echo #
 
 #Séquence d'informations système
 
-echo  "\033[43;30m ---> INFORMATIONS SYSTEME <--- \033[0m"
+echo  "\033[43;30m ---> INFORMATIONS SYSTEME <---                         \033[0m"
 cat /proc/version
 echo #
 
@@ -183,17 +185,17 @@ cat /etc/os-release
 echo #
 echo #
 
-echo  "\033[43;30m LISTE DES NOYAUX \033[0m"
+echo  "\033[43;30m LISTE DES NOYAUX                                       \033[0m"
 dpkg -l | grep -Ei "linux-(g|h|i|lo|si|t)" |sort -k3 | cut -d" " -s -f1,2,3 | column -s" " -t
 echo #
 echo #
 
-echo  "\033[43;30m ESPACE DISQUE DISPONIBLE \033[0m"
+echo  "\033[43;30m ESPACE DISQUE DISPONIBLE                               \033[0m"
 df -h 
 echo #
 echo #
 
-echo  "\033[43;30m INFORMATIONS HARDWARE ET USER \033[0m"
+echo  "\033[43;30m INFORMATIONS HARDWARE ET USER                          \033[0m"
 
 #INSTALLATION DE NEOFETCH CHECK INFOS SYSTEM
 confirm()
@@ -222,7 +224,7 @@ echo #
 #Fonction qui verifie les fichiers de log et affiche le log erreur si des erreurs sont presentes.
 
 echo # 
-echo  "\033[43;30m ---> FICHIER LOG ERREUR MAJ \033[0m"
+echo  "\033[43;30m ---> FICHIER LOG ERREUR MAJ                            \033[0m"
 
 if [ -e /var/log/update_upgrade.err ] && [ /var/log/update_upgrade.err -nt /var/log/update_upgrade.err ]
 then
@@ -253,9 +255,13 @@ confirm()
 if confirm "REBOOT ?"; then
    reboot
 else
-    echo #
-    echo  "\033[44;37m ---> FIN DU SCRIPT <--- \033[0m"
-    
+echo #
+echo  "\033[5;44;30m                  ---> FIN DU SCRIPT <---                \033[0m"
 fi
 echo #
-
+echo #
+echo "\033[43;30m KusApp -> CLEAN - UPDATE - INFOS SYSTEM ..............//\033[0m"
+echo #
+echo "\033[43;30m GitHub --> Kusanagi8200 / 2024 \033[0m"
+echo #
+echo "\033[43;30m MENU .....//\033[0m"
