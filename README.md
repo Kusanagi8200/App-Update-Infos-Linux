@@ -1,3 +1,5 @@
+![Kuzapp](Kuzapp.png)
+
 ## System Maintenance Information and Diagnostic Script
 
 ## Bash version 
