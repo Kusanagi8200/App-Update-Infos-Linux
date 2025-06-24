@@ -1,3 +1,8 @@
+![GitHub KuzApp](https://img.shields.io/badge/%20%20%20GitHub%20%20%20-%20%20%20KuzApp_Bash%20%20%20-blue?style=for-the-badge&logo=github)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![License](https://img.shields.io/badge/OpenSource-green?style=for-the-badge)
+![Version](https://img.shields.io/badge/Version-0.1.25-orange?style=for-the-badge)
+
 ![Kuzapp](Kuzapp.png)
 
 ## System Maintenance Information and Diagnostic Script
