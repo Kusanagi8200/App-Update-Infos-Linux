@@ -3,15 +3,17 @@
 ![License](https://img.shields.io/badge/OpenSource-green?style=for-the-badge)
 ![Version](https://img.shields.io/badge/Version-0.1.25-orange?style=for-the-badge)
 
+
+### **System Maintenance Information and Diagnostic Script** 
+
+<br>
 ![Kuzapp](Kuzapp.png)
 
-## System Maintenance Information and Diagnostic Script
+#### **Bash version**
 
-## Bash version 
+**The bash script provides an interface to execute a variety of sub-scripts that perform system cleaning, diagnostic, and network information tasks.**
 
-The bash script provides an interface to execute a variety of sub-scripts that perform system cleaning, diagnostic, and network information tasks.
-
-## Features
+#### **Features**
 
 The script displays a menu with several options, each corresponding to a different sub-script :
 
@@ -27,18 +29,18 @@ The script displays a menu with several options, each corresponding to a differe
   + 10 **UPDATE-SCRIPT**: No colors Update script.
   +  0 **EXIT**: Exit the App.
 
-## User Rights Verification
+#### User Rights Verification
 
 The script checks if the user has the necessary rights (sudo) to execute the sub-scripts. If not, an error message is displayed, and the script stops.
 
-## Text Formatting
+#### Text Formatting
 
 Color functions and variables are used to enhance the readability of messages:
 
 - `ColorGreen` and `ColorRed` functions to display text in green and red, respectively.
 - `green`, `red`, and `clear` variables to define color codes.
 
-## Interactive Menu
+#### Interactive Menu
 
 The script uses a menu structure to allow the user to choose from the different options. Each option launches a different sub-script.
 
