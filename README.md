@@ -10,7 +10,7 @@
 
 **The bash script provides an interface to execute a variety of sub-scripts that perform system cleaning, diagnostic, and network information tasks.**  
 
-![Kuzapp](Kuzapp.png)
+![Kuzapp](AppUpdateInfos.png)
 
 #### **Features**
 
