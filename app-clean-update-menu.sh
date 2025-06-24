@@ -6,7 +6,7 @@
 # This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY.
 
 echo #
-echo -e "\033[38;5;214m█▄▀ █ █ ▀█▀ ▄▀▄ █▀▄ █▀▄ | Made by Kusanagi8200 - 2024\033[0m"
+echo -e "\033[38;5;214m█▄▀ █ █ ▀█▀ ▄▀▄ █▀▄ █▀▄ | Made by Kusanagi8200 - 2025\033[0m"
 echo -e "\033[38;5;214m█ █ ▀▄█ █▄▄ █▀█ █▀  █▀  | https://github.com/Kusanagi8200\033[0m"
 echo -e "\033[43;30m Bash Script Collection for Linux Administration Systems \033[0m"
 
