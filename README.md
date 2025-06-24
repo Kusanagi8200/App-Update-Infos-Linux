@@ -4,14 +4,13 @@
 ![Version](https://img.shields.io/badge/Version-0.1.25-orange?style=for-the-badge)
 
 
-### **System Maintenance Information and Diagnostic Script** 
+### **Linux System Maintenance Information and Diagnostic Script**  
 
-<br>
+#### **Bash version**  
+
+**The bash script provides an interface to execute a variety of sub-scripts that perform system cleaning, diagnostic, and network information tasks.**  
+
 ![Kuzapp](Kuzapp.png)
-
-#### **Bash version**
-
-**The bash script provides an interface to execute a variety of sub-scripts that perform system cleaning, diagnostic, and network information tasks.**
 
 #### **Features**
 
